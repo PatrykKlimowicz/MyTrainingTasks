@@ -1,5 +1,5 @@
-AC_INIT(HelloWorldCustomLayer, 1.0, klimowicz.patryk.pk@gmail.com)
-AC_CONFIG_SRCDIR([HelloWorld.c])
+AC_INIT(HelloWorldCustomLayer, 1.0)
+AC_CONFIG_SRCDIR([helloworld.c])
 AM_INIT_AUTOMAKE(HelloWorldCustomLayer, main)
 
 # Checks for programs.
