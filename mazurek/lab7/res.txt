@@ -1,0 +1,14 @@
+Bez OpenMP:
+Czas wpisywania do tablicy Wallis: 
+4.000000
+Czas sumowania tablicy Wallis: 
+suma: 2.000000
+Czas wpisywania do tablicy Leibnitz: 
+6.000000
+Czas sumowania tablicy Leibnitz: 
+2.000000
+Z OpenMP:Metoda Wallis'a Pi = 3.141593.
+Metoda Leibniz'a Pi = 3.141593.
+Czas wykonywania obliczen: 
+Wallis: 0.000000
+Leibnitz: 1.000000

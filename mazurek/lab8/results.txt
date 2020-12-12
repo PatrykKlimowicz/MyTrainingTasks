@@ -1,0 +1,40 @@
+========================================
+Algorytm blokujacy to algorytm Leibniz'a
+========================================
+
+[12:29:59]  [patryk@patryk: ~/mazurek/lab8 $]  [  ]
+  **** ./l 
+Metoda Wallis'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 2.
+Metoda Leibniz'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 0.
+Czas wykonywania obliczen: 
+Wallis: 1.000000
+Leibniz: 3.000000
+
+[12:30:03]  [patryk@patryk: ~/mazurek/lab8 $]  [  ]
+  **** ./l 
+Metoda Wallis'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 1.
+Metoda Leibniz'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 0.
+Czas wykonywania obliczen: 
+Wallis: 0.000000
+Leibniz: 2.000000
+
+[12:30:07]  [patryk@patryk: ~/mazurek/lab8 $]  [  ]
+  **** ./l 
+Metoda Wallis'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 1.
+Metoda Leibniz'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 3.
+Czas wykonywania obliczen: 
+Wallis: 1.000000
+Leibniz: 2.000000
+
+[12:30:12]  [patryk@patryk: ~/mazurek/lab8 $]  [  ]
+  **** ./l 
+Metoda Wallis'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 1.
+Metoda Leibniz'a Pi = 3.141593 - obliczenia wykonane przez watek nr. 0.
+Czas wykonywania obliczen: 
+Wallis: 1.000000
+Leibniz: 3.000000
+
+[12:30:20]  [patryk@patryk: ~/mazurek/lab8 $]  [  ]
+  **** 
+
+
