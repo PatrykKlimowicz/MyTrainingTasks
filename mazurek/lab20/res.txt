@@ -1,0 +1,103 @@
+CPU temp: 50.000000
+Fan1 status: 0 rpm
+Fan2 status: 0 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 54.000000
+Fan1 status: 0 rpm
+Fan2 status: 0 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 58.000000
+Fan1 status: 0 rpm
+Fan2 status: 0 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 60.000000
+Fan1 status: 1899 rpm
+Fan2 status: 1662 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 63.000000
+Fan1 status: 2686 rpm
+Fan2 status: 2690 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 65.000000
+Fan1 status: 3138 rpm
+Fan2 status: 2730 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 67.000000
+Fan1 status: 3460 rpm
+Fan2 status: 3344 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 68.000000
+Fan1 status: 3726 rpm
+Fan2 status: 3726 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 69.000000
+Fan1 status: 4112 rpm
+Fan2 status: 4123 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 70.000000
+Fan1 status: 4347 rpm
+Fan2 status: 4360 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 71.000000
+Fan1 status: 4569 rpm
+Fan2 status: 4573 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 71.000000
+Fan1 status: 4573 rpm
+Fan2 status: 4573 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4750 rpm
+Fan2 status: 4769 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4946 rpm
+Fan2 status: 5067 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4954 rpm
+Fan2 status: 5145 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4942 rpm
+Fan2 status: 5141 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4946 rpm
+Fan2 status: 5141 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 73.000000
+Fan1 status: 4934 rpm
+Fan2 status: 5141 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 72.000000
+Fan1 status: 4934 rpm
+Fan2 status: 5128 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 73.000000
+Fan1 status: 4938 rpm
+Fan2 status: 5141 rpm
+Gregory Lebnitz PI: 3.141592652683047326434007118223
+
+CPU temp: 73.000000
+Fan1 status: 4934 rpm
+Fan2 status: 5128 rpm
