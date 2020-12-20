@@ -1,0 +1,693 @@
+Analyzing loop at l.c:24
+l.c:24:5: note: ===== analyze_loop_nest =====
+l.c:24:5: note: === vect_analyze_loop_form ===
+l.c:24:5: note: === get_loop_niters ===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _3 = *_2;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _5 = *_4;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_6 = _7;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_scalar_cycles ===
+l.c:24:5: note: Analyze phi: i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: Access function of PHI: {0, +, 1}_1
+l.c:24:5: note: step: 1,  init: 0
+l.c:24:5: note: Detected induction.
+l.c:24:5: note: Analyze phi: .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: Analyze phi: ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: Access function of PHI: {16777216, +, 4294967295}_1
+l.c:24:5: note: step: 4294967295,  init: 16777216
+l.c:24:5: note: Detected induction.
+l.c:24:5: note: === vect_pattern_recog ===
+l.c:24:5: note: vect_is_simple_use: operand _3
+l.c:24:5: note: def_stmt: _3 = *_2;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: === vect_mark_stmts_to_be_vectorized ===
+l.c:24:5: note: init: phi relevant? i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: init: phi relevant? .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: init: phi relevant? ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: init: stmt relevant? _1 = (sizetype) i_31;
+l.c:24:5: note: init: stmt relevant? _2 = a_13 + _1;
+l.c:24:5: note: init: stmt relevant? _3 = *_2;
+l.c:24:5: note: init: stmt relevant? _4 = b_15 + _1;
+l.c:24:5: note: init: stmt relevant? _5 = *_4;
+l.c:24:5: note: init: stmt relevant? _6 = d_17 + _1;
+l.c:24:5: note: init: stmt relevant? _7 = _3 * _5;
+l.c:24:5: note: init: stmt relevant? *_6 = _7;
+l.c:24:5: note: vec_stmt_relevant_p: stmt has vdefs.
+l.c:24:5: note: mark relevant 5, live 0: *_6 = _7;
+l.c:24:5: note: init: stmt relevant? i_26 = i_31 + 1;
+l.c:24:5: note: init: stmt relevant? ivtmp_43 = ivtmp_44 - 1;
+l.c:24:5: note: init: stmt relevant? if (ivtmp_43 != 0)
+l.c:24:5: note: worklist: examine stmt: *_6 = _7;
+l.c:24:5: note: vect_is_simple_use: operand _7
+l.c:24:5: note: def_stmt: _7 = _3 * _5;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: mark relevant 5, live 0: _7 = _3 * _5;
+l.c:24:5: note: worklist: examine stmt: _7 = _3 * _5;
+l.c:24:5: note: vect_is_simple_use: operand _3
+l.c:24:5: note: def_stmt: _3 = *_2;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: mark relevant 5, live 0: _3 = *_2;
+l.c:24:5: note: vect_is_simple_use: operand _5
+l.c:24:5: note: def_stmt: _5 = *_4;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: mark relevant 5, live 0: _5 = *_4;
+l.c:24:5: note: worklist: examine stmt: _5 = *_4;
+l.c:24:5: note: worklist: examine stmt: _3 = *_2;
+l.c:24:5: note: === vect_analyze_data_ref_dependences ===
+l.c:24:5: note: === vect_determine_vectorization_factor ===
+l.c:24:5: note: ==> examining phi: i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: ==> examining phi: .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: ==> examining phi: ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: ==> examining statement: _1 = (sizetype) i_31;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: _2 = a_13 + _1;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: _3 = *_2;
+l.c:24:5: note: get vectype for scalar type:  unsigned char
+l.c:24:5: note: vectype: vector(16) unsigned char
+l.c:24:5: note: nunits = 16
+l.c:24:5: note: ==> examining statement: _4 = b_15 + _1;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: _5 = *_4;
+l.c:24:5: note: get vectype for scalar type:  unsigned char
+l.c:24:5: note: vectype: vector(16) unsigned char
+l.c:24:5: note: nunits = 16
+l.c:24:5: note: ==> examining statement: _6 = d_17 + _1;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: _7 = _3 * _5;
+l.c:24:5: note: get vectype for scalar type:  unsigned char
+l.c:24:5: note: vectype: vector(16) unsigned char
+l.c:24:5: note: get vectype for scalar type:  unsigned char
+l.c:24:5: note: vectype: vector(16) unsigned char
+l.c:24:5: note: nunits = 16
+l.c:24:5: note: ==> examining statement: *_6 = _7;
+l.c:24:5: note: get vectype for scalar type:  unsigned char
+l.c:24:5: note: vectype: vector(16) unsigned char
+l.c:24:5: note: nunits = 16
+l.c:24:5: note: ==> examining statement: i_26 = i_31 + 1;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: ivtmp_43 = ivtmp_44 - 1;
+l.c:24:5: note: skip.
+l.c:24:5: note: ==> examining statement: if (ivtmp_43 != 0)
+l.c:24:5: note: skip.
+l.c:24:5: note: vectorization factor = 16
+l.c:24:5: note: === vect_analyze_slp ===
+l.c:24:5: note: === vect_make_slp_decision ===
+l.c:24:5: note: vectorization_factor = 16, niters = 16777216
+l.c:24:5: note: === vect_analyze_data_refs_alignment ===
+l.c:24:5: note: vect_compute_data_ref_alignment:
+l.c:24:5: note: can't force alignment of ref: *_2
+l.c:24:5: note: vect_compute_data_ref_alignment:
+l.c:24:5: note: can't force alignment of ref: *_4
+l.c:24:5: note: vect_compute_data_ref_alignment:
+l.c:24:5: note: can't force alignment of ref: *_6
+l.c:24:5: note: === vect_prune_runtime_alias_test_list ===
+l.c:24:5: note: === vect_enhance_data_refs_alignment ===
+l.c:24:5: note: Unknown misalignment, naturally aligned
+l.c:24:5: note: Unknown misalignment, naturally aligned
+l.c:24:5: note: Unknown misalignment, naturally aligned
+l.c:24:5: note: vect_can_advance_ivs_p:
+l.c:24:5: note: Analyze phi: i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: Analyze phi: .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: reduc or virtual phi. skip.
+l.c:24:5: note: Analyze phi: ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: vect_model_load_cost: unaligned supported by hardware.
+l.c:24:5: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+l.c:24:5: note: vect_model_store_cost: unaligned supported by hardware.
+l.c:24:5: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+l.c:24:5: note: Setting misalignment to -1.
+l.c:24:5: note: Setting misalignment to -1.
+l.c:24:5: note: Setting misalignment to -1.
+l.c:24:5: note: Setting misalignment to -1.
+l.c:24:5: note: Alignment of access forced using peeling.
+l.c:24:5: note: Peeling for alignment will be applied.
+l.c:24:5: note: Vectorizing an unaligned access.
+l.c:24:5: note: Vectorizing an unaligned access.
+l.c:24:5: note: === vect_analyze_loop_operations ===
+l.c:24:5: note: examining phi: i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: examining phi: .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: examining phi: ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: ==> examining statement: _1 = (sizetype) i_31;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: _2 = a_13 + _1;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: _3 = *_2;
+l.c:24:5: note: vect_is_simple_use: operand *_2
+l.c:24:5: note: not ssa-name.
+l.c:24:5: note: use not simple.
+l.c:24:5: note: vect_is_simple_use: operand *_2
+l.c:24:5: note: not ssa-name.
+l.c:24:5: note: use not simple.
+l.c:24:5: note: vect_model_load_cost: aligned.
+l.c:24:5: note: vect_model_load_cost: inside_cost = 1, prologue_cost = 0 .
+l.c:24:5: note: ==> examining statement: _4 = b_15 + _1;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: _5 = *_4;
+l.c:24:5: note: vect_is_simple_use: operand *_4
+l.c:24:5: note: not ssa-name.
+l.c:24:5: note: use not simple.
+l.c:24:5: note: vect_is_simple_use: operand *_4
+l.c:24:5: note: not ssa-name.
+l.c:24:5: note: use not simple.
+l.c:24:5: note: vect_model_load_cost: unaligned supported by hardware.
+l.c:24:5: note: vect_model_load_cost: inside_cost = 2, prologue_cost = 0 .
+l.c:24:5: note: ==> examining statement: _6 = d_17 + _1;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: _7 = _3 * _5;
+l.c:24:5: note: vect_is_simple_use: operand _3
+l.c:24:5: note: def_stmt: _3 = *_2;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: vect_is_simple_use: operand _5
+l.c:24:5: note: def_stmt: _5 = *_4;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: === vectorizable_operation ===
+l.c:24:5: note: vect_model_simple_cost: inside_cost = 1, prologue_cost = 0 .
+l.c:24:5: note: ==> examining statement: *_6 = _7;
+l.c:24:5: note: vect_is_simple_use: operand _7
+l.c:24:5: note: def_stmt: _7 = _3 * _5;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: vect_model_store_cost: unaligned supported by hardware.
+l.c:24:5: note: vect_model_store_cost: inside_cost = 2, prologue_cost = 0 .
+l.c:24:5: note: ==> examining statement: i_26 = i_31 + 1;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: ivtmp_43 = ivtmp_44 - 1;
+l.c:24:5: note: irrelevant.
+l.c:24:5: note: ==> examining statement: if (ivtmp_43 != 0)
+l.c:24:5: note: irrelevant.
+cost model: prologue peel iters set to vf/2.
+cost model: epilogue peel iters set to vf/2 because peeling for alignment is unknown.
+l.c:24:5: note: Cost model analysis: 
+  Vector inside of loop cost: 6
+  Vector prologue cost: 36
+  Vector epilogue cost: 36
+  Scalar iteration cost: 4
+  Scalar outside cost: 0
+  Vector outside cost: 72
+  prologue iterations: 8
+  epilogue iterations: 8
+  Calculated minimum iters for profitability: 19
+l.c:24:5: note:   Runtime profitability threshold = 18
+l.c:24:5: note:   Static estimate profitability threshold = 18
+l.c:24:5: note: epilog loop required
+l.c:24:5: note: vect_can_advance_ivs_p:
+l.c:24:5: note: Analyze phi: i_31 = PHI <i_26(4), 0(2)>
+l.c:24:5: note: Analyze phi: .MEM_32 = PHI <.MEM_25(4), .MEM_18(2)>
+l.c:24:5: note: reduc or virtual phi. skip.
+l.c:24:5: note: Analyze phi: ivtmp_44 = PHI <ivtmp_43(4), 16777216(2)>
+l.c:24:5: note: loop vectorized
+l.c:24:5: note: === vec_transform_loop ===
+l.c:24:5: note: created a_13
+l.c:24:5: note: niters for prolog loop: (unsigned int) -(unsigned long) a_13 & 15
+
+loop at l.c:25: if (ivtmp_52 < prolog_loop_niters.5_47)
+l.c:24:5: note: === vect_update_inits_of_dr ===
+l.c:24:5: note: vect_update_ivs_after_vectorizer: phi: i_31 = PHI <i_26(4), i_53(10)>
+l.c:24:5: note: vect_update_ivs_after_vectorizer: phi: .MEM_32 = PHI <.MEM_25(4), .MEM_54(10)>
+l.c:24:5: note: reduc or virtual phi. skip.
+l.c:24:5: note: vect_update_ivs_after_vectorizer: phi: ivtmp_44 = PHI <ivtmp_43(4), ivtmp_55(10)>
+l.c:24:5: note: ------>vectorizing phi: i_31 = PHI <i_26(4), i_53(18)>
+l.c:24:5: note: ------>vectorizing phi: .MEM_32 = PHI <.MEM_25(4), .MEM_54(18)>
+l.c:24:5: note: ------>vectorizing phi: ivtmp_44 = PHI <ivtmp_43(4), ivtmp_55(18)>
+l.c:24:5: note: ------>vectorizing statement: _1 = (sizetype) i_31;
+l.c:24:5: note: ------>vectorizing statement: _2 = a_13 + _1;
+l.c:24:5: note: ------>vectorizing statement: _3 = *_2;
+l.c:24:5: note: transform statement.
+l.c:24:5: note: transform load. ncopies = 1
+l.c:24:5: note: create vector_type-pointer variable to type: vector(16) unsigned char  vectorizing a pointer ref: *a_13
+l.c:24:5: note: created vectp_a.13_78
+l.c:24:5: note: add new stmt: vect__3.14_81 = MEM[(unsigned char *)vectp_a.12_79];
+l.c:24:5: note: ------>vectorizing statement: _4 = b_15 + _1;
+l.c:24:5: note: ------>vectorizing statement: _5 = *_4;
+l.c:24:5: note: transform statement.
+l.c:24:5: note: transform load. ncopies = 1
+l.c:24:5: note: create vector_type-pointer variable to type: vector(16) unsigned char  vectorizing a pointer ref: *b_15
+l.c:24:5: note: created vectp_b.16_82
+l.c:24:5: note: add new stmt: vect__5.17_85 = MEM[(unsigned char *)vectp_b.15_83];
+l.c:24:5: note: ------>vectorizing statement: _6 = d_17 + _1;
+l.c:24:5: note: ------>vectorizing statement: _7 = _3 * _5;
+l.c:24:5: note: transform statement.
+l.c:24:5: note: vect_is_simple_use: operand _3
+l.c:24:5: note: def_stmt: _3 = *_2;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: vect_is_simple_use: operand _5
+l.c:24:5: note: def_stmt: _5 = *_4;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: transform binary/unary operation.
+l.c:24:5: note: vect_get_vec_def_for_operand: _3
+l.c:24:5: note: vect_is_simple_use: operand _3
+l.c:24:5: note: def_stmt: _3 = *_2;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note:   def_stmt =  _3 = *_2;
+l.c:24:5: note: vect_get_vec_def_for_operand: _5
+l.c:24:5: note: vect_is_simple_use: operand _5
+l.c:24:5: note: def_stmt: _5 = *_4;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note:   def_stmt =  _5 = *_4;
+l.c:24:5: note: add new stmt: vect__7.18_86 = vect__3.14_81 * vect__5.17_85;
+l.c:24:5: note: ------>vectorizing statement: *_6 = _7;
+l.c:24:5: note: transform statement.
+l.c:24:5: note: vect_is_simple_use: operand _7
+l.c:24:5: note: def_stmt: _7 = _3 * _5;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note: transform store. ncopies = 1
+l.c:24:5: note: vect_get_vec_def_for_operand: _7
+l.c:24:5: note: vect_is_simple_use: operand _7
+l.c:24:5: note: def_stmt: _7 = _3 * _5;
+l.c:24:5: note: type of def: internal
+l.c:24:5: note:   def_stmt =  _7 = _3 * _5;
+l.c:24:5: note: create vector_type-pointer variable to type: vector(16) unsigned char  vectorizing a pointer ref: *d_17
+l.c:24:5: note: created vectp_d.20_87
+l.c:24:5: note: add new stmt: MEM[(unsigned char *)vectp_d.19_88] = vect__7.18_86;
+l.c:24:5: note: ------>vectorizing statement: i_26 = i_31 + 1;
+l.c:24:5: note: ------>vectorizing statement: ivtmp_43 = ivtmp_44 - 1;
+l.c:24:5: note: ------>vectorizing statement: vectp_a.12_80 = vectp_a.12_79 + 16;
+l.c:24:5: note: ------>vectorizing statement: vectp_b.15_84 = vectp_b.15_83 + 16;
+l.c:24:5: note: ------>vectorizing statement: vectp_d.19_89 = vectp_d.19_88 + 16;
+l.c:24:5: note: ------>vectorizing statement: if (ivtmp_43 != 0)
+
+loop at l.c:25: if (ivtmp_92 < bnd.8_72)
+l.c:24:5: note: LOOP VECTORIZED
+
+l.c:11:5: note: vectorized 1 loops in function.
+l.c:11:5: note: ===vect_slp_analyze_bb===
+l.c:21:13: note: === vect_analyze_data_refs ===
+l.c:21:13: note: not vectorized: not enough data-refs in basic block.
+l.c:21:13: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _266 = *_265;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _268 = *_267;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_269 = _270;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _266 = *_265;
+l.c:24:28: note: not consecutive access _268 = *_267;
+l.c:24:28: note: not consecutive access *_269 = _270;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _281 = *_280;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _283 = *_282;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_284 = _285;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _281 = *_280;
+l.c:24:28: note: not consecutive access _283 = *_282;
+l.c:24:28: note: not consecutive access *_284 = _285;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _296 = *_295;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _298 = *_297;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_299 = _300;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _296 = *_295;
+l.c:24:28: note: not consecutive access _298 = *_297;
+l.c:24:28: note: not consecutive access *_299 = _300;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _311 = *_310;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _313 = *_312;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_314 = _315;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _311 = *_310;
+l.c:24:28: note: not consecutive access _313 = *_312;
+l.c:24:28: note: not consecutive access *_314 = _315;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _326 = *_325;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _328 = *_327;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_329 = _330;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _326 = *_325;
+l.c:24:28: note: not consecutive access _328 = *_327;
+l.c:24:28: note: not consecutive access *_329 = _330;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _341 = *_340;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _343 = *_342;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_344 = _345;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _341 = *_340;
+l.c:24:28: note: not consecutive access _343 = *_342;
+l.c:24:28: note: not consecutive access *_344 = _345;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _356 = *_355;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _358 = *_357;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_359 = _360;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _356 = *_355;
+l.c:24:28: note: not consecutive access _358 = *_357;
+l.c:24:28: note: not consecutive access *_359 = _360;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _371 = *_370;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _373 = *_372;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_374 = _375;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _371 = *_370;
+l.c:24:28: note: not consecutive access _373 = *_372;
+l.c:24:28: note: not consecutive access *_374 = _375;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _386 = *_385;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _388 = *_387;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_389 = _390;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _386 = *_385;
+l.c:24:28: note: not consecutive access _388 = *_387;
+l.c:24:28: note: not consecutive access *_389 = _390;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _401 = *_400;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _403 = *_402;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_404 = _405;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _401 = *_400;
+l.c:24:28: note: not consecutive access _403 = *_402;
+l.c:24:28: note: not consecutive access *_404 = _405;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _416 = *_415;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _418 = *_417;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_419 = _420;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _416 = *_415;
+l.c:24:28: note: not consecutive access _418 = *_417;
+l.c:24:28: note: not consecutive access *_419 = _420;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _431 = *_430;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _433 = *_432;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_434 = _435;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _431 = *_430;
+l.c:24:28: note: not consecutive access _433 = *_432;
+l.c:24:28: note: not consecutive access *_434 = _435;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _446 = *_445;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _448 = *_447;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_449 = _450;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _446 = *_445;
+l.c:24:28: note: not consecutive access _448 = *_447;
+l.c:24:28: note: not consecutive access *_449 = _450;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _461 = *_460;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _463 = *_462;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_464 = _465;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _461 = *_460;
+l.c:24:28: note: not consecutive access _463 = *_462;
+l.c:24:28: note: not consecutive access *_464 = _465;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _29 = *_30;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _10 = *_28;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_9 = _39;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _29 = *_30;
+l.c:24:28: note: not consecutive access _10 = *_28;
+l.c:24:28: note: not consecutive access *_9 = _39;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: not vectorized: not enough data-refs in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+l.c:25:14: note: === vect_analyze_data_refs ===
+l.c:25:14: note: not vectorized: no vectype for stmt: vect__3.14_81 = MEM[(unsigned char *)vectp_a.12_79];
+ scalar_type: vector(16) unsigned char
+l.c:25:14: note: not vectorized: no vectype for stmt: vect__5.17_85 = MEM[(unsigned char *)vectp_b.15_83];
+ scalar_type: vector(16) unsigned char
+l.c:25:14: note: not vectorized: no vectype for stmt: MEM[(unsigned char *)vectp_d.19_88] = vect__7.18_86;
+ scalar_type: vector(16) unsigned char
+l.c:25:14: note: === vect_analyze_data_ref_accesses ===
+l.c:25:14: note: not vectorized: no grouped stores in basic block.
+l.c:25:14: note: ===vect_slp_analyze_bb===
+l.c:25:14: note: ===vect_slp_analyze_bb===
+l.c:25:14: note: === vect_analyze_data_refs ===
+l.c:25:14: note: not vectorized: not enough data-refs in basic block.
+l.c:25:14: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _2 = *_1;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _4 = *_3;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_5 = _6;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _2 = *_1;
+l.c:24:5: note: not consecutive access _4 = *_3;
+l.c:24:5: note: not consecutive access *_5 = _6;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _96 = *_95;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _98 = *_97;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_99 = _100;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _96 = *_95;
+l.c:24:5: note: not consecutive access _98 = *_97;
+l.c:24:5: note: not consecutive access *_99 = _100;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _109 = *_108;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _111 = *_110;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_112 = _113;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _109 = *_108;
+l.c:24:5: note: not consecutive access _111 = *_110;
+l.c:24:5: note: not consecutive access *_112 = _113;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _122 = *_121;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _124 = *_123;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_125 = _126;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _122 = *_121;
+l.c:24:5: note: not consecutive access _124 = *_123;
+l.c:24:5: note: not consecutive access *_125 = _126;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _135 = *_134;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _137 = *_136;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_138 = _139;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _135 = *_134;
+l.c:24:5: note: not consecutive access _137 = *_136;
+l.c:24:5: note: not consecutive access *_138 = _139;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _148 = *_147;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _150 = *_149;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_151 = _152;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _148 = *_147;
+l.c:24:5: note: not consecutive access _150 = *_149;
+l.c:24:5: note: not consecutive access *_151 = _152;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _161 = *_160;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _163 = *_162;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_164 = _165;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _161 = *_160;
+l.c:24:5: note: not consecutive access _163 = *_162;
+l.c:24:5: note: not consecutive access *_164 = _165;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _174 = *_173;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _176 = *_175;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_177 = _178;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _174 = *_173;
+l.c:24:5: note: not consecutive access _176 = *_175;
+l.c:24:5: note: not consecutive access *_177 = _178;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _187 = *_186;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _189 = *_188;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_190 = _191;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _187 = *_186;
+l.c:24:5: note: not consecutive access _189 = *_188;
+l.c:24:5: note: not consecutive access *_190 = _191;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _200 = *_199;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _202 = *_201;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_203 = _204;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _200 = *_199;
+l.c:24:5: note: not consecutive access _202 = *_201;
+l.c:24:5: note: not consecutive access *_203 = _204;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _213 = *_212;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _215 = *_214;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_216 = _217;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _213 = *_212;
+l.c:24:5: note: not consecutive access _215 = *_214;
+l.c:24:5: note: not consecutive access *_216 = _217;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _226 = *_225;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _228 = *_227;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_229 = _230;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _226 = *_225;
+l.c:24:5: note: not consecutive access _228 = *_227;
+l.c:24:5: note: not consecutive access *_229 = _230;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _239 = *_238;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _241 = *_240;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_242 = _243;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _239 = *_238;
+l.c:24:5: note: not consecutive access _241 = *_240;
+l.c:24:5: note: not consecutive access *_242 = _243;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:5: note: === vect_analyze_data_refs ===
+l.c:24:5: note: got vectype for stmt: _252 = *_251;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: _254 = *_253;
+vector(16) unsigned char
+l.c:24:5: note: got vectype for stmt: *_255 = _256;
+vector(16) unsigned char
+l.c:24:5: note: === vect_analyze_data_ref_accesses ===
+l.c:24:5: note: not consecutive access _252 = *_251;
+l.c:24:5: note: not consecutive access _254 = *_253;
+l.c:24:5: note: not consecutive access *_255 = _256;
+l.c:24:5: note: not vectorized: no grouped stores in basic block.
+l.c:24:5: note: ===vect_slp_analyze_bb===
+l.c:24:28: note: === vect_analyze_data_refs ===
+l.c:24:28: note: got vectype for stmt: _63 = *_62;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: _65 = *_64;
+vector(16) unsigned char
+l.c:24:28: note: got vectype for stmt: *_66 = _67;
+vector(16) unsigned char
+l.c:24:28: note: === vect_analyze_data_ref_accesses ===
+l.c:24:28: note: not consecutive access _63 = *_62;
+l.c:24:28: note: not consecutive access _65 = *_64;
+l.c:24:28: note: not consecutive access *_66 = _67;
+l.c:24:28: note: not vectorized: no grouped stores in basic block.
+l.c:24:28: note: ===vect_slp_analyze_bb===
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: note: === vect_analyze_data_refs ===
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:107:10: note: not vectorized: not enough data-refs in basic block.
+l.c:33:5: note: === vect_analyze_data_refs ===
+l.c:33:5: note: not vectorized: not enough data-refs in basic block.
+
+Czas obliczen: 0.000000.

@@ -1,0 +1,3 @@
+W obydwu przypadkach pętla z linii 24 została zwektoryzowana
+Czas wykonania z zewnętrzną pętlą i bez są odpowiednio równe: ok. 5s i ok. 0s.
+Zewnętrzna pętla nie została zwektoryzowana poprawnie stąd brak znaczącego wpływu na przyspieszenie wykonania programu
